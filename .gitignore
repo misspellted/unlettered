@@ -144,8 +144,20 @@ dmypy.json
 # ----------------
 
 # Visual Studio Code directory
-.vsc/
+.vscode/
 
 # ----------------
 # End of Development Tools
+# ================
+
+# ================
+# Sensitive Data
+# ----------------
+
+# Configuration variables
+# Probably not the best way to do this... but for now... it's what I'm runnin' :P
+config.py
+
+# ----------------
+# End of Sensitive Data
 # ================

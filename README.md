@@ -28,6 +28,21 @@ Your platform may have different ways to activate, and if you used a different v
 
 The reason for activating the virtual environment is such that when `pip` is invoked, the packages/modules installed target the virtual environment, keeping the local system packages/modules as such only needed by the system Python environment, not our project(s). A clean environment is a good environment, and one step closer to reproducibility, a good attribute for development and testing environments.
 
+### Module Dependencies
+
+`requests` is now a dependency, so pip that right into the virtual environment:
+
+    python -m pip install requests
+
+### Configuration
+
+A new, but ignored, file, `config.py` holds some slightly sensitive information (a webhook-id and a webhook-token for a Discord server bot). That's not included, but to make it work, you'll need to create the `config.py` file in the same location as `launcher.py`, containing the following fields:
+
+* WEBHOOK_ID
+* WEBHOOK_TOKEN
+
+These are used to construct a pycord.DiscordWebhook instance, representing that Discord server bot. I'll admit, they aren't the best named constants right now, but ... this is just a little sandbox. Future commits will likely fix this.
+
 ## Notes
 
 ### Development Environment
